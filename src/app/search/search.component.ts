@@ -12,12 +12,12 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  displayValue: string="";
+  searchValue: string="Iphone";
   
 
   searchDetails(event: Event)
   {
     // console.log((<HTMLInputElement>event.target).value);
-    this.displayValue = (<HTMLInputElement>event.target).value;
+    this.searchValue = (<HTMLInputElement>event.target).value;
   }
 }
