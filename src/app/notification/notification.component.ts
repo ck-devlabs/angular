@@ -2,9 +2,20 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
-  template: `<div class="alert alert-success" [hidden]="displayNotification"><p class="notification-p">This website uses cookies</p></div>`,
+  template: `<div class="alert alert-success" [hidden]="displayNotification">
+                <p class="notification-p">This website uses cookies</p>
+                <div class="close">
+                    <button 
+                      type="button" 
+                      class='btn' 
+                      aria-label="Close"
+                      (click)="closeCacheMessage()"
+                      >X</button>
+                </div>
+              </div>`,
   styles: ['div{margin: 10px 0px; padding: 10px 20px; text-align:center}',
-    '.notification-p{font-size:15px}']
+    '.notification-p{font-size:15px}',
+    '.close{float:right; margin-top:-50px}']
 })
 export class NotificationComponent implements OnInit {
 
@@ -14,5 +25,9 @@ export class NotificationComponent implements OnInit {
   }
 
   displayNotification : boolean = false;
+
+  closeCacheMessage(){
+      this.displayNotification = true;
+  }
 
 }
