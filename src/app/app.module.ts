@@ -9,6 +9,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     NotificationComponent,
     SearchComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

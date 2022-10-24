@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { bindCallback } from 'rxjs';
 
 @Component({
   selector: 'app-register',
