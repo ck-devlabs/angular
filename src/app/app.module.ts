@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { NotificationComponent } from './notification/notification.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     HeaderComponent,
     NotificationComponent,
-    SearchComponent
+    SearchComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
