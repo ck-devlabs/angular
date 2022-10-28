@@ -22,8 +22,11 @@
             <td>{{product.price}}</td>
             <td [ngStyle]="{color: product.available === 'Available' ? 'green' : 'red'}">{{product.available}}</td>
             <td>
-                <button class="btn btn-primary" *ngIf="product.available==='Available'">Show Details</button>&nbsp;
-                <button class="btn btn-success" *ngIf="product.available==='Available'">Buy Now</button>
+                <button class="btn btn-primary">Show Details</button>&nbsp;
+                <button class="btn btn-success" *ngIf="product.available==='Available'; else notifyme">Buy Now</button>
+                <ng-template #notifyme>
+                  <button class="btn btn-danger">Notify Me</button>
+               </ng-template>
             </td>
         </tr>
         </tbody>

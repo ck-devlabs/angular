@@ -3,5 +3,5 @@
     <!-- <input type="text" (input)="searchDetails($event)"/> -->
     <input type="text" [(ngModel)]="searchValue">
     <br>
-    <span>You have searched for {{searchValue}}</span>
+    <span *ngIf="searchValue!''">You have searched for {{searchValue}}</span>
 </div>
