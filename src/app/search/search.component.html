@@ -1,7 +1,7 @@
-<div class="form-outline">
+<div class="form-outline" [ngClass]="{backgroundColor : searchValue!=''}">
     <label>Search</label>
     <!-- <input type="text" (input)="searchDetails($event)"/> -->
     <input type="text" [(ngModel)]="searchValue">
     <br>
-    <span *ngIf="searchValue!''">You have searched for {{searchValue}}</span>
+    <span *ngIf="searchValue!=''">You have searched for {{searchValue}}</span>
 </div>
